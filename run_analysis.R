@@ -138,4 +138,4 @@ melt<-melt(tidyDT,id=c("subject","activity"),measure.vars=names(tidyDT)[-c(1,2)]
 setnames(melt, names(melt)[3:4], c("feature","mean"))
 melt<-arrange(melt,subject, activity)
 
-write.table(tidyDT, file="tidyDT.txt", row.names=FALSE, col.names=TRUE, sep="\t", quote=FALSE)
+write.table(melt, file="tidyDT.txt", row.names=FALSE, col.names=TRUE, sep="\t", quote=FALSE)
