@@ -1,10 +1,9 @@
 #Getting and Cleaning Data Jan-Feb 2015 - Coursera course project 
 
-setwd("C:\\Users\\asnaghip\\Documents\\GitHub\\Course Project\\getting-and-cleaning-data")
 
-# url<-"https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
-# download.file(url,"dati.zip")
-# dateDownload<-date()
+url<-"https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
+download.file(url,"dati.zip")
+dateDownload<-date()
 
 library(data.table)
 library(dplyr)
