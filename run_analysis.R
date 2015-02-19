@@ -1,5 +1,6 @@
 #Getting and Cleaning Data Jan-Feb 2015 - Coursera course project 
 
+setwd("C:\\Users\\asnaghip\\Documents\\GitHub\\Course Project\\getting-and-cleaning-data")
 
 url<-"https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
 download.file(url,"dati.zip")
@@ -42,10 +43,6 @@ y_test         <- data.table(read.table(paste(zipdir,"\\UCI HAR Dataset\\test\\y
 unlink(zipdir, recursive = T)
 rm(list=c("files","zipdir"))
 
-
-
-
-
 #1. Merges the training and the test sets to create one data set.
 
 tables()
@@ -59,7 +56,7 @@ X       <- rbind(X_train,X_test)
 y       <- rbind(y_train,y_test)
 subject <- rbind(subject_train,subject_test)
 
-rm(list=c("X_test","X_train","y_test","y_train"))
+rm(list=c("subject_train","subject_test","X_test","X_train","y_test","y_train"))
 
 #2. Appropriately labels the data set with descriptive variable names. 
 features[,names:=gsub("\\(","",V2)]
